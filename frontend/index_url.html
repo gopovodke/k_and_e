@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_url</title>
+</head>
+<body>
+	<body style="background:#2E2E2E">
+<font size="4" color="silver" face="Arial"><form action="/index_url/"  method="post">{% csrf_token %}
+    {{ form }}
+    <button type="submit">Indexing</button>
+</form></font>
+{% if message != '' %}
+    <p>{{ message }}! <a href="/site_viewing/">See your result here.</a></p>
+{% endif %}
+<p>{{var}}</p>
+</body>
+</html>

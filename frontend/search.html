@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+
+<body>
+  <body style="background:#2E2E2E">
+<div>
+<form action="/search/" method="post" align="center" width="500"  >{% csrf_token %}
+    {{ form }}
+    <button type="submit">Search</button>
+</form>
+{% if articles != ''  %}
+    {% for item in articles %}
+        <a href="{{ item.file_name }}"><p>{{ item.title }}</p></a>
+    {% endfor %}
+{% endif %}
+<p>{{var}}</p>
+</div>
+</body>
+</html>
